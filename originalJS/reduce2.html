@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>使用reduce找出某一项在数组中出现的次数</title>
+  <link rel="stylesheet" href="./mark.css">
+</head>
+<body>
+  <div>加粗黑体字是官方费解释</div>
+  <div class='decW'>
+    <p class='offical'>reduce() 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。</p>
+  </div>
+  <div>计算数组中某一个值出现的次数</div>
+  <p>注意:箭头函数自带返回值的使用</p>
+  <p><span>reduce 接收两个参数,第一个参数是个函数。第二个参数是初始值</span></p>
+  <p>其中第一个参数又接收四个参数.</p>
+   <p>1.</p>
+</body>
+<script src="./babel.min.js"></script>
+<script type="text/javascript">
+  var arr =[1,2.3,4,3,3,3,3,3,3,3];
+  let arrCount = (arr,value)=>
+    arr.reduce((a,v)=>v === value?a+1:a+0,0);
+  console.log(arrCount(arr,3));
+
+
+  [0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array){
+  return accumulator + currentValue;
+});
+</script>
+</html>
